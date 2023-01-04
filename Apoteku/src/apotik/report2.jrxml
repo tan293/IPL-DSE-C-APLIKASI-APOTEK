@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="062012d2-8949-43e9-aa63-84eb60540a71">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="kode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select *from penjualan where kode_transaksi = $P{kode}]]>
+	</queryString>
+	<field name="Nomor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kode_Transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Pembeli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kode_Obat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Obat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Merek_Obat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga_Jual" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah_Beli" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total_Harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tanggal_Transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tunai" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Kembali" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Total_Harga_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{Total_Harga}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1750fe27-8041-4548-806f-403a4db798a1" x="17" y="15" width="483" height="64"/>
+				<textElement textAlignment="Center">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[APOTEK DUA MASA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1750fe27-8041-4548-806f-403a4db798a1" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode Transaksi]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="13a100bf-d4a6-43c0-ab55-b6cad6152767" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Kode_Transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bf8ac4c9-c121-48eb-9b11-7c7f597555f3" x="100" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Nama_Pembeli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="99e13222-5847-42df-9740-e59fc4997a55" x="0" y="54" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode_Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="471dabcb-ede5-4ad8-b4c0-d021f9e5d677" x="200" y="54" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah_Beli]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="adf14d9e-dd47-4b42-b4d8-bcde86521aee" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Tanggal_Transaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="99e13222-5847-42df-9740-e59fc4997a55" x="100" y="54" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="471dabcb-ede5-4ad8-b4c0-d021f9e5d677" x="300" y="54" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Harga Jual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1750fe27-8041-4548-806f-403a4db798a1" x="0" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Pembeli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="471dabcb-ede5-4ad8-b4c0-d021f9e5d677" x="400" y="54" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL HARGA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement uuid="9f183ee1-9c00-44a2-bb75-83b970726e3f" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Kode_Obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="517d43f1-188f-4c56-85b0-612156d34aac" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Nama_Obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4b6d7b3a-a2db-4f45-b914-fe5bf600beae" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Jumlah_Beli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6298c52a-b53d-419b-ac64-841e1513ffd6" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Harga_Jual}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Column">
+				<reportElement uuid="170c1deb-b119-444d-a021-e087bfcc546f" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{Total_Harga_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="57c7ca76-aafc-4d30-9381-eceb94efb3db" x="300" y="20" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kembali]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="63d4c6b9-7664-4c90-99ae-f1b1781f744c" x="400" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Kembali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9f7f40dd-481f-4cb1-9900-ce146cf89e8c" x="300" y="0" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tunai]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b0ca2755-5283-4010-99c1-8a555c60858d" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Tunai}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
