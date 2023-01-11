@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Acer
+ * @author ratu
  */
 public class User extends javax.swing.JInternalFrame {
 
