@@ -31,7 +31,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
- * @author Acer
+ * @author Lenovo
  */
 public class Kasir extends javax.swing.JInternalFrame {
 
